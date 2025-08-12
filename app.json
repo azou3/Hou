@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "AzkarApp",
+    "slug": "azkar-app",
+    "android": {
+      "package": "com.yourname.azkar"
+    }
+  }
+}
