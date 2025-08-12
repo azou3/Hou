@@ -1,1 +1,16 @@
 
+name: Build APK
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+    - run: npm install
+    - run: npm install -g expo-cli
+    - run: expo build:android -t apk --non-interactive
+    env:
+      EXPO_CLI_PREVIEW: true
